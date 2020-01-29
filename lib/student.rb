@@ -24,7 +24,7 @@ students_array.each{|student| Student.new(student)}
 # {:name=>"Sushanth Bhaskarab", :location=>"Portland, OR"}]
   end
 
-
+def add_student_attributes(attributes_hash)
     attributes_hash.each{|k,v| self.send(("#{k}="),v)}
 #     {:twitter=>"someone@twitter.com",
 # :linkedin=>"someone@linkedin.com",
