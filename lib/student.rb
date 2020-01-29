@@ -7,12 +7,14 @@ class Student
   @@all = []
 
   def initialize(student_hash)
-    binding.pry
     student_hash.each {|k,v| self.send(("#{k}="),v)}
-    @@all << self 
+    #k = name 
+    #v = location
+    @@all << self #save the new students, is like save methode 
   end
 
   def self.create_from_collection(students_array)
+    binding.pry 
     students_array.each{|student| Student.new(student)}
   end
 
